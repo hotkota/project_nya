@@ -1,13 +1,15 @@
-require "./*"
+require "./classes/*"
 
 VERSION = "0.0.1"
 
 module Project_Nya
   class Main
-    render = Render.new
-
-    render.render(VERSION)
+    def initialize
+      @render = Render.new
+      @planet = Planet.new
+    end
   end
 end
 
-Project_Nya::Main.new
+# Start here
+game = Project_Nya::Main.new
