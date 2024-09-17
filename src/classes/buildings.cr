@@ -3,27 +3,30 @@ module Project_Nya
   module Buildings
 
     class Factory
-      def initialize(ID : UInt16)
+      def initialize(id : UInt16)
         @name = "Производственные районы"
-        @ID = ID
+        @description = "Производит сталь и бетон"
+        @ID = id
       rescue
         puts "Ошибка в Buildings::Factory"
       end
     end
 
     class Skyscrapers
-      def initialize(ID : UInt16)
+      def initialize(id : UInt16)
         @name = "Жилые кварталы"
-        @ID = ID
+        @description = "Дает дом для рабочих"
+        @ID = id
       rescue
         puts "Ошибка в Buildings::Skyscrapers"
       end
     end
 
     class Commercial
-      def initialize(ID : UInt16)
+      def initialize(id : UInt16)
         @name = "Торговые районы"
-        @ID = ID
+        @description = "Добывает деньги"
+        @ID = id
       rescue
         puts "Ошибка в Buildings::Commercial"
       end

@@ -28,10 +28,6 @@ module Project_Nya
         else
           puts "Неверное число"
         end
-
-        rescue
-          puts "Ошибка в Districts.build"
-        end
       end
 
       def list
@@ -44,6 +40,7 @@ module Project_Nya
       def initialize
         @steel = 0
         @concrete = 0
+        @money = 0
       end
 
       # Количество ресурсов
@@ -53,6 +50,9 @@ module Project_Nya
       def read_concrete : Int32
         @concrete
       end
+      def read_money : Int32
+        @money
+      end
 
       # Изменение ресурсов
       def change_steel(delta : Int32)
@@ -61,7 +61,9 @@ module Project_Nya
       def change_concrete(delta : Int32)
         @concrete = @concrete + delta
       end
-
+      def change_money(delta : Int32)
+        @money = @money + delta
+      end
     end
   end
 end
